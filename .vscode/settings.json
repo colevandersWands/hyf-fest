@@ -1,0 +1,8 @@
+{
+    "macros": {
+        "serve": [
+            "workbench.action.tasks.build",
+            "workbench.action.files.save"
+        ]
+    }
+}
