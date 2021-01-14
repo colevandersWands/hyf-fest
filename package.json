@@ -1,0 +1,29 @@
+{
+  "name": "fest",
+  "version": "1.0.0",
+  "description": "jest as a function",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bruteForceBilly/hyf-fest.git"
+  },
+  "keywords": [
+    "jest",
+    "serverless"
+  ],
+  "author": "bruteForceBilly",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bruteForceBilly/hyf-fest/issues"
+  },
+  "homepage": "https://github.com/bruteForceBilly/hyf-fest#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "jest": "^26.6.3"
+  }
+}
