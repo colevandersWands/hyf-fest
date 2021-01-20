@@ -1,6 +1,5 @@
 const express = require("express");
-const { scrapeProject } = require('./scraper.js');
-const { testHtml } = require('./tester.js');
+const { validator } = require('./validator.js');
 
 const app = express();
 const port = 3000
@@ -22,11 +21,9 @@ app.get('/run', async (req, res) => {
   }
   
   if(regexUrl.test(projectUrl)){
-    const project = await scrapeProject(projectUrl);
-    const result = await testHtml(project);
+    const result = await validator(projectUrl);
     //res.setHeader("Content-Type", "text/plain");
     //res.writeHead(200);
-    //res.end(testResult);
     res.json(result);
 
   } else {

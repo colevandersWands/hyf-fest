@@ -2,13 +2,15 @@ const util = require('util');
 const exec = util.promisify(require('child_process').exec);
 const vnu = require ( 'vnu-jar' );
 
+// `echo '${html}' | java -jar ${vnu} --format "json"  -`
 
-async function testHtml(html) {
+
+async function testHtml(tmpDir) {
     let outputMessage;
     let errorMessage;
 
     try {
-      const { stdout, stderr } = await exec(`echo '${html}' | java -jar ${vnu} --format "json"  -`);
+      const { stdout, stderr } = await exec(`java -jar ${vnu}  --format "json"  ${tmpDir}`);
     //   console.log('stdout:', stdout);
     //   console.log('stderr:', stderr);
      
