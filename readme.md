@@ -3,7 +3,7 @@
  Service for programmatically validating student projects.  
 
 ### What is it? 
-hyf-fest is an express app that scrapes student projects into a temporary directory and let's it's content be validated by the [The Nu Html Checker (v.Nu)](https://validator.w3.org/nu/about.html) from w3.org and responds with lin errors.  Could be triggered by github actions, browser extension, or from a client script that the student copy and pastes into their project. 
+hyf-fest is an express app that scrapes student projects into a temporary directory and let's it's content be validated by the [The Nu Html Checker (v.Nu)](https://validator.w3.org/nu/about.html) from w3.org and responds with lint errors.  Could onde day be triggered by github actions, browser extension, or from a client script that the student copy and pastes into their project. 
 
 Potentially it could accept a secondary param with an url for a test spec to run jest in the future, enabling collaboration between mentors. 
 
