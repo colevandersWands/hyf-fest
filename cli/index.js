@@ -47,9 +47,9 @@ for (const student of students) {
     } else {
       const outputPath = path.join(
         studentDir,
-        `${repoName || student.userName + '.github.io'}.NO_RESULT.txt`
+        `${repoName || student.userName + '.github.io'}.NO_RESULT.json`
       );
-      fs.writeFile(outputPath, '', err => (err ? console.log(err) : null));
+      fs.writeFile(outputPath, 'null', err => (err ? console.log(err) : null));
     }
   });
 }
