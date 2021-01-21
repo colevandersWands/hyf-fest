@@ -3,6 +3,10 @@ const { validator } = require('./validator.js');
 
 const app = express();
 const port = 3000
+
+const normalizeUrl = require('normalize-url');
+
+
 const regexUrl = /((([A-Za-z]{3,9}:(?:\/\/)?)(?:[-;:&=\+\$,\w]+@)?[A-Za-z0-9.-]+|(?:www.|[-;:&=\+\$,\w]+@)[A-Za-z0-9.-]+)((?:\/[\+~%\/.\w-_]*)?\??(?:[-\+=&;%@.\w_]*)#?(?:[\w]*))?)/
 
 
@@ -12,18 +16,16 @@ app.get('/', (req, res) => {
 
 app.get('/run', async (req, res) => {
 
-  let projectUrl = null;
+  let url = null;
 
-  if(Object.keys(req.query).includes("projectUrl")){
-    projectUrl = req.query.projectUrl
+  if(Object.keys(req.query).includes("url")){
+    url = normalizeUrl(req.query.url)
   } else {
     res.status(400).send("Invalid query param key")
   }
   
-  if(regexUrl.test(projectUrl)){
-    const result = await validator(projectUrl);
-    //res.setHeader("Content-Type", "text/plain");
-    //res.writeHead(200);
+  if(regexUrl.test(url)){
+    const result = await validator(url);
     res.json(result);
 
   } else {

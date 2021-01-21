@@ -4,9 +4,8 @@
   "description": "jest as a function",
   "main": "server.js",
   "scripts": {
-    "build": "babel src -d lib",
-    "serve": "nodemon ./lib/server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "serve": "./src/server.mjs",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -23,16 +22,17 @@
   },
   "homepage": "https://github.com/bruteForceBilly/hyf-fest#readme",
   "dependencies": {
-    "@babel/polyfill": "^7.12.1",
-    "core-js": "^3.6.5",
     "express": "^4.17.1",
-    "fetch-css": "^3.1.6",
-    "puppeteer": "^5.5.0"
+    "json-fixer": "^1.6.8",
+    "mitt": "^2.1.0",
+    "normalize-url": "^4.5.0",
+    "puppeteer": "^5.5.0",
+    "vnu-jar": "^20.6.30",
+    "website-scraper": "^4.2.3",
+    "website-scraper-existing-directory": "^0.1.0",
+    "website-scraper-puppeteer": "^0.1.5"
   },
   "devDependencies": {
-    "@babel/cli": "^7.12.10",
-    "@babel/core": "^7.12.10",
-    "@babel/preset-env": "^7.12.11",
     "jest": "^26.6.3"
   }
 }
