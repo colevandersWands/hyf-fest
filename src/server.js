@@ -26,7 +26,7 @@ app.get('/run', async (req, res) => {
   
   if(regexUrl.test(url)){
     const result = await validator(url);
-    res.json(result);
+    res.send(result);
 
   } else {
     res.status(400).send("Invalid query param value")
