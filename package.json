@@ -2,10 +2,9 @@
   "name": "fest",
   "version": "1.0.0",
   "description": "jest as a function",
-  "main": "server.js",
+  "main": "app/index.js",
   "scripts": {
-    "serve": "./src/server.mjs",
-    "test": "jest"
+    "start": "node ./app/index.js"
   },
   "repository": {
     "type": "git",
@@ -31,8 +30,5 @@
     "website-scraper": "^4.2.3",
     "website-scraper-existing-directory": "^0.1.0",
     "website-scraper-puppeteer": "^0.1.5"
-  },
-  "devDependencies": {
-    "jest": "^26.6.3"
   }
 }

@@ -1,8 +1,8 @@
 const express = require("express");
-const { validator } = require('./validator.js');
+const { validator } = require('./src/validator.js');
 
 const app = express();
-const port = 3000
+const port = process.env.port || 3000;
 
 const normalizeUrl = require('normalize-url');
 
