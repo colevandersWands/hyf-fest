@@ -2,9 +2,9 @@
   "name": "fest",
   "version": "1.0.0",
   "description": "jest as a function",
-  "main": "app/index.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node ./app/index.js"
+    "start": "node ./index.js"
   },
   "repository": {
     "type": "git",
@@ -30,5 +30,8 @@
     "website-scraper": "^4.2.3",
     "website-scraper-existing-directory": "^0.1.0",
     "website-scraper-puppeteer": "^0.1.5"
+  },
+  "engines": {
+    "node": "15.x"
   }
 }
