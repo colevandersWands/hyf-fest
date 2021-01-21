@@ -2,7 +2,13 @@ const express = require("express");
 const { validator } = require('./src/validator.js');
 
 const app = express();
-const port = process.env.port || 3000;
+
+let port = process.env.PORT;
+
+if (port == null || port == "") {
+  port = 8000;
+}
+
 
 const normalizeUrl = require('normalize-url');
 
